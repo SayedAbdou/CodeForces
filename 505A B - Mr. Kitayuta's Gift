@@ -1,0 +1,32 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include <algorithm>
+#include <string>
+#include <stdio.h>
+
+using namespace std;
+int main()
+{
+    string str;
+    string temp;
+    string last;
+    cin>>str;
+    for (char c='a'; c<='z'; c++){
+        for (int i=0; i<=(int)str.size(); i++)
+        {
+            temp = str;
+            temp.insert(temp.begin() + i, c);
+            last = temp;
+            reverse(temp.begin(), temp.end());
+            if(last == temp){
+                 cout<<temp<<endl;
+                return 0;
+            }
+
+
+        }
+    } cout <<"NA"<<endl;
+
+
+    return 0;
+}
