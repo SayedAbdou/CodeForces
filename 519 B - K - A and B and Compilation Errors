@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() 
+{
+
+	int n, count1=0, count2=0, count3=0;
+	int remove, remove2;
+	int arr[100000];
+
+	cin>> n;
+
+	for (int i = 0; i < n; ++i)
+	{
+		/* code */
+		cin >>arr[i];
+		count1+=arr[i];
+
+	}
+
+	for (int j = 0; j < n-1; ++j)
+	{
+		/* code */
+		cin >>arr[j];
+		count2+=arr[j];
+
+	}
+
+	remove = count1 - count2;
+
+	for (int k = 0; k < n-2; ++k)
+	{
+		/* code */
+		cin >>arr[k];
+		count3+=arr[k];
+	}
+
+	remove2 = count2 - count3;
+
+	cout << remove << endl;
+	cout << remove2 << endl;
+
+	return 0;
+}
+close
