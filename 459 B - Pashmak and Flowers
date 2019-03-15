@@ -1,0 +1,57 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() 
+{
+	long long num, count1=0, count2=0;
+	long long max=0, min=0, pair=0, maxBeuty;
+	int arr[1000000];
+
+	cin >> num;
+
+	for (int i = 0; i < num; i++)
+	{
+		/* code */
+		cin >>arr[i];
+	}
+
+	max = arr[0];
+	for (int i = 0; i < num; i++)
+	{
+		/* code */
+		if (max < arr[i])
+			max = arr[i];
+	}
+
+	min = arr[0];
+	for (int i = 0; i < num; i++)
+	{
+		/* code */
+		if (min > arr[i])
+			min = arr[i];
+		//cout<<"minimum " << min << " arr "<< arr[i]<<endl;
+	}
+
+	maxBeuty = max - min; /* End of 1st part of problem */
+	//cout << min << " " << max<<endl;
+	if (max == min)
+		pair = num*(num-1) / 2;
+	else{
+
+		for (int i = 0; i < num; ++i)
+		{
+			/* code */
+			if(min == arr[i])
+				count1++;
+			if (max == arr[i])
+				count2++;
+		}
+		pair = count1 * count2;
+	}
+
+	cout << maxBeuty <<" "<< pair <<endl;
+
+	return 0;
+}
+close
